@@ -31,7 +31,7 @@ Settings page needs to remember current settings
 - [ ] push cell logic into the custom cell instead of in the main viewcontroller
 
 ### Walkthrough
-![Video Walkthrough](http://i.imgur.com/4pDzo12.gifv)
+![Video Walkthrough](http://i.imgur.com/4pDzo12.gif)
 
 Credits
 ---------
