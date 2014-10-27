@@ -53,9 +53,9 @@ NSString * const kYelpTokenSecret = @"e4up2VTCXfiJnLPMiQIWUGsCV2I";
          forCellReuseIdentifier:@"ListingCell"];
     
     // add a search bar to the navigation bar
-    UISearchBar *searchBar = [[UISearchBar alloc] initWithFrame:CGRectMake(-5.0, 0.0, 250.0, 44.0)];
+    UISearchBar *searchBar = [[UISearchBar alloc] initWithFrame:CGRectMake(-5.0, 0.0, 220.0, 44.0)];
     searchBar.autoresizingMask = UIViewAutoresizingFlexibleWidth;
-    UIView *searchBarView = [[UIView alloc] initWithFrame:CGRectMake(0.0, 0.0, 240.0, 44.0)];
+    UIView *searchBarView = [[UIView alloc] initWithFrame:CGRectMake(0.0, 0.0, 220.0, 44.0)];
     searchBarView.autoresizingMask = 0;
     searchBar.delegate = self;
     [searchBarView addSubview:searchBar];
@@ -103,8 +103,6 @@ NSString * const kYelpTokenSecret = @"e4up2VTCXfiJnLPMiQIWUGsCV2I";
     
     [self.searchParameters setValue:categoryString forKey:@"category_filter"];
 
-    //    NSLog(@"%@", self.searchParameters);
-    
     [self reloadData];
 }
 
@@ -159,8 +157,6 @@ NSString * const kYelpTokenSecret = @"e4up2VTCXfiJnLPMiQIWUGsCV2I";
     // make a request for data
     [self.client searchWithOptions:self.searchParameters success:^(AFHTTPRequestOperation *operation, id response) {
 
-//        NSLog(@"response: %@", response);
-        
         self.listings = response[@"businesses"];
         [self.tableView reloadData];
 
@@ -209,14 +205,26 @@ NSString * const kYelpTokenSecret = @"e4up2VTCXfiJnLPMiQIWUGsCV2I";
         neighborhood = [[listing valueForKeyPath:@"location.neighborhoods"] objectAtIndex:0];
     cell.addressLabel.text = [NSString stringWithFormat:format, address, neighborhood];
     
-    // categories
-    cell.categoryLabel.text = [[[listing valueForKeyPath:@"categories"] objectAtIndex:0] objectAtIndex:0];
+    // build a categories string
+    NSMutableSet * categorySet = [NSMutableSet set];
+    for (id category in [listing valueForKeyPath:@"categories"])
+        [categorySet addObject:[category objectAtIndex:0]];
 
+    NSArray *categoryArray = [categorySet allObjects];
+    NSString *categoryString = [categoryArray componentsJoinedByString:@", "];
+    cell.categoryLabel.text = categoryString;
+    
+    // distance
+    float distance = [[listing valueForKeyPath:@"distance"] floatValue] / 1600;
+    cell.distanceLabel.text = [NSString stringWithFormat:@"%.2f mi", distance];
+    
     cell.photoView.alpha = 0.0;
     [UIView beginAnimations:@"fade in" context:nil];
     [UIView setAnimationDuration:2.0];
     cell.photoView.alpha = 1.0;
     [UIView commitAnimations];
+    
+    NSLog(@"%@", listing);
     
     return cell;
 }

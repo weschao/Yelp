@@ -29,16 +29,24 @@
                         </variation>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1. Grand Pu Bah" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="taY-38-a6r">
-                        <rect key="frame" x="108" y="8" width="200" height="16"/>
+                        <rect key="frame" x="108" y="8" width="278" height="16"/>
                         <constraints>
-                            <constraint firstAttribute="width" constant="200" id="Iy1-uF-c4q"/>
+                            <constraint firstAttribute="width" constant="180" id="Iy1-uF-c4q"/>
                         </constraints>
                         <fontDescription key="fontDescription" type="system" pointSize="13"/>
                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                         <nil key="highlightedColor"/>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="Iy1-uF-c4q"/>
+                            </mask>
+                        </variation>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0.07 mi" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FJq-ii-CqF">
-                        <rect key="frame" x="396" y="10" width="35" height="12"/>
+                        <rect key="frame" x="394" y="11" width="35" height="12"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="35" id="1aX-A6-W31"/>
+                        </constraints>
                         <fontDescription key="fontDescription" type="system" pointSize="10"/>
                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                         <nil key="highlightedColor"/>
@@ -50,13 +58,13 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1288 Divisadero St, Mission Bay" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jTa-nP-1a3">
-                        <rect key="frame" x="108" y="48" width="315" height="15"/>
+                        <rect key="frame" x="108" y="50" width="315" height="15"/>
                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Thai, Seafood, Breakfast and Brunch" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W3O-2n-pzC">
-                        <rect key="frame" x="108" y="67" width="206" height="15"/>
+                        <rect key="frame" x="108" y="69" width="206" height="15"/>
                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                         <nil key="highlightedColor"/>
@@ -69,7 +77,7 @@
                         </constraints>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="149 Reviews" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FNZ-SR-GFn">
-                        <rect key="frame" x="200" y="28" width="60" height="12"/>
+                        <rect key="frame" x="200" y="30" width="60" height="12"/>
                         <fontDescription key="fontDescription" type="system" pointSize="10"/>
                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                         <nil key="highlightedColor"/>
@@ -83,7 +91,7 @@
                     <constraint firstItem="aWX-D7-DUZ" firstAttribute="leading" secondItem="W8e-MK-fmT" secondAttribute="trailing" constant="8" id="L8x-z7-zio"/>
                     <constraint firstAttribute="trailingMargin" secondItem="uKh-tg-1dX" secondAttribute="trailing" constant="6" id="N3Z-Zx-2pj"/>
                     <constraint firstItem="aWX-D7-DUZ" firstAttribute="top" secondItem="taY-38-a6r" secondAttribute="bottom" constant="4" id="Qud-If-xLt"/>
-                    <constraint firstItem="FJq-ii-CqF" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="RzE-6v-yoa"/>
+                    <constraint firstItem="FJq-ii-CqF" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="11" id="RzE-6v-yoa"/>
                     <constraint firstAttribute="bottomMargin" secondItem="W8e-MK-fmT" secondAttribute="bottom" constant="-3" id="Sas-RS-Cx5"/>
                     <constraint firstItem="jTa-nP-1a3" firstAttribute="top" secondItem="FNZ-SR-GFn" secondAttribute="bottom" constant="8" id="TQv-IX-nZ6"/>
                     <constraint firstItem="jTa-nP-1a3" firstAttribute="leading" secondItem="W8e-MK-fmT" secondAttribute="trailing" constant="8" id="WGK-sE-egT"/>
@@ -93,14 +101,15 @@
                     <constraint firstItem="jTa-nP-1a3" firstAttribute="top" secondItem="FNZ-SR-GFn" secondAttribute="bottom" constant="4" id="bwV-Rj-8NQ"/>
                     <constraint firstItem="taY-38-a6r" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" id="cSb-DM-I7Y"/>
                     <constraint firstAttribute="bottom" secondItem="W8e-MK-fmT" secondAttribute="bottom" constant="3" id="clh-DA-F57"/>
-                    <constraint firstItem="FNZ-SR-GFn" firstAttribute="top" secondItem="taY-38-a6r" secondAttribute="bottom" constant="4" id="dcK-A7-zms"/>
+                    <constraint firstItem="FNZ-SR-GFn" firstAttribute="top" secondItem="taY-38-a6r" secondAttribute="bottom" constant="6" id="dcK-A7-zms"/>
                     <constraint firstItem="taY-38-a6r" firstAttribute="leading" secondItem="W8e-MK-fmT" secondAttribute="trailing" constant="8" id="hO0-LN-1bo"/>
                     <constraint firstAttribute="bottom" secondItem="W8e-MK-fmT" secondAttribute="bottom" id="hmS-Ry-guf"/>
                     <constraint firstItem="FNZ-SR-GFn" firstAttribute="top" secondItem="taY-38-a6r" secondAttribute="bottom" constant="2" id="lAL-a7-gea"/>
                     <constraint firstAttribute="trailing" secondItem="uKh-tg-1dX" secondAttribute="trailing" constant="8" id="n93-G0-bEu"/>
                     <constraint firstItem="W3O-2n-pzC" firstAttribute="top" secondItem="jTa-nP-1a3" secondAttribute="bottom" constant="4" id="nSu-aw-9bJ"/>
                     <constraint firstItem="W3O-2n-pzC" firstAttribute="leading" secondItem="W8e-MK-fmT" secondAttribute="trailing" constant="8" id="psP-PI-atN"/>
-                    <constraint firstAttribute="trailing" secondItem="FJq-ii-CqF" secondAttribute="trailing" constant="6" id="v7y-es-RuX"/>
+                    <constraint firstAttribute="trailing" secondItem="FJq-ii-CqF" secondAttribute="trailing" constant="8" id="v7y-es-RuX"/>
+                    <constraint firstItem="FJq-ii-CqF" firstAttribute="leading" secondItem="taY-38-a6r" secondAttribute="trailing" constant="8" id="vIU-1v-h2y"/>
                     <constraint firstItem="W8e-MK-fmT" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="wDU-VI-cj7"/>
                     <constraint firstItem="FNZ-SR-GFn" firstAttribute="leading" secondItem="aWX-D7-DUZ" secondAttribute="trailing" constant="8" id="z4E-CL-06o"/>
                     <constraint firstAttribute="trailingMargin" secondItem="jTa-nP-1a3" secondAttribute="trailing" constant="6" id="zsz-o3-hyG"/>
@@ -130,7 +139,7 @@
                 <outlet property="reviewCountLabel" destination="FNZ-SR-GFn" id="Ppa-cc-nqq"/>
                 <outlet property="starImageView" destination="aWX-D7-DUZ" id="Czu-ZT-GBE"/>
             </connections>
-            <point key="canvasLocation" x="471.5" y="307.5"/>
+            <point key="canvasLocation" x="471.5" y="306.5"/>
         </tableViewCell>
     </objects>
 </document>

@@ -2,10 +2,9 @@
 
 This is a Yelp app displaying search results using the OAuth 1.0a [Yelp API](http://www.yelp.com/developers/documentation/v2/search_api). 
 
-Time spent: 7h33m
+Time spent: 8h
 
 ### Features
-9:05
 
 #### Required
 
@@ -21,7 +20,6 @@ Time spent: 7h33m
 - [x] Clicking on the "Apply" button should dismiss the filters page and trigger the search w/ the new filter settings.
 
 Settings page needs to remember current settings
-See all row should not have switch
 
 #### Optional
 
@@ -33,7 +31,7 @@ See all row should not have switch
 - [ ] push cell logic into the custom cell instead of in the main viewcontroller
 
 ### Walkthrough
-![Video Walkthrough](http://i.imgur.com/tTrlVQ0.gif)
+![Video Walkthrough](http://i.imgur.com/4pDzo12.gifv)
 
 Credits
 ---------
