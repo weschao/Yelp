@@ -97,7 +97,13 @@ NSString * const kYelpTokenSecret = @"e4up2VTCXfiJnLPMiQIWUGsCV2I";
     // deals
     [self.searchParameters setValue:[settings objectAtIndex:2] forKey:@"deals_filter"];
 
+    // convert category set to a string
+    NSArray *categoryArray = [[options valueForKey:@"selectedCategories"] allObjects];
+    NSString *categoryString = [categoryArray componentsJoinedByString:@","];
     
+    [self.searchParameters setValue:categoryString forKey:@"category_filter"];
+
+    //    NSLog(@"%@", self.searchParameters);
     
     [self reloadData];
 }
@@ -189,8 +195,6 @@ NSString * const kYelpTokenSecret = @"e4up2VTCXfiJnLPMiQIWUGsCV2I";
     cell.reviewCountLabel.text = [NSString stringWithFormat:@"%@ reviews", [listing valueForKeyPath:@"review_count"]];
     
     // address: street address plus neighborhood
-    NSLog(@"%@", [listing valueForKeyPath:@"location.address"]);
-    
     // assume address and neighborhood are blank to avoid index out of bounds crashes
     NSString *address = @"";
     NSString *format = @"%@%@";

@@ -2,15 +2,10 @@
 
 This is a Yelp app displaying search results using the OAuth 1.0a [Yelp API](http://www.yelp.com/developers/documentation/v2/search_api). 
 
-Time spent: 4h30m
-
-### Next steps
-
-- Augment the search method in the `YelpClient` with whatever search parameters you want to support.
-
-4:40
+Time spent: 7h33m
 
 ### Features
+9:05
 
 #### Required
 
@@ -19,11 +14,14 @@ Time spent: 4h30m
 - [x] Custom cells should have the proper Auto Layout constraints
 - [x] Search bar should be in the navigation bar
  * Filter page
-- [ ] Implement filters for category, sort (best match, distance, highest rated), distance (miles), deals (on/off).
+- [x] Implement filters for category, sort (best match, distance, highest rated), distance (miles), deals (on/off).
 - [x] Filters table should be organized into sections as in the mock.
 - [x] Radius filter should expand as in the real Yelp app
-- [ ] Categories should show a subset of the full list with a "See All" row to expand. 
-- [ ] Clicking on the "Search" button should dismiss the filters page and trigger the search w/ the new filter settings.
+- [x] Categories should show a subset of the full list with a "See All" row to expand. 
+- [x] Clicking on the "Apply" button should dismiss the filters page and trigger the search w/ the new filter settings.
+
+Settings page needs to remember current settings
+See all row should not have switch
 
 #### Optional
 
