@@ -13,11 +13,26 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    // custom nav bar image
+//    UIImage *navBackgroundImage = [UIImage imageNamed:@"TitleBarWithLogo"];
+//    [[UINavigationBar appearance] setBackgroundImage:navBackgroundImage forBarMetrics:UIBarMetricsDefault];
+//    
+//    // custom nav bar text
+//    NSShadow *shadow = [[NSShadow alloc] init];
+//    shadow.shadowColor = [UIColor colorWithRed:0.0 green:0.0 blue:0.0 alpha:0.8];
+//    shadow.shadowOffset = CGSizeMake(0, 1);
+//    [[UINavigationBar appearance] setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:
+//                                                          [UIColor whiteColor], NSForegroundColorAttributeName,
+//                                                          shadow, NSShadowAttributeName, nil]];
+//    [[UINavigationBar appearance] setTintColor:[UIColor redColor]];
+//    
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     
-    self.window.rootViewController = [[MainViewController alloc] init];
+    MainViewController * mvc = [[MainViewController alloc] init];
+    UINavigationController *nvc = [[UINavigationController alloc] initWithRootViewController:mvc];
     
-    self.window.backgroundColor = [UIColor whiteColor];
+    self.window.rootViewController = nvc;
+    
     [self.window makeKeyAndVisible];
     return YES;
 }

@@ -28,4 +28,9 @@
     return [self GET:@"search" parameters:parameters success:success failure:failure];
 }
 
+- (AFHTTPRequestOperation *)searchWithOptions:(NSDictionary *)options success:(void (^)(AFHTTPRequestOperation *operation, id response))success failure:(void (^)(AFHTTPRequestOperation *operation, NSError *error))failure {
+    
+    return [self GET:@"search" parameters:options success:success failure:failure];
+}
+
 @end
